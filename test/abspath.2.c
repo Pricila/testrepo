@@ -97,7 +97,7 @@ const char *make_nonrelative_path(const char *path)
 	if (is_absolute_path(path)) {
 		if (strlcpy(buf, path, PATH_MAX) >= PATH_MAX)
 			die("Too long path: %.*s", 60, path);
-	} else {
+	} else {  ## BLUE BLUE BLUE
 		const char *cwd = get_pwd_cwd();
 		if (!cwd)
 			die_errno("Cannot determine the current working directory");
